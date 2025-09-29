@@ -1,4 +1,3 @@
-import { resolve } from "bun";
 import type { Message, Model } from "./types";
 
 
@@ -11,13 +10,11 @@ async (
   messages:Message[],
   model:Model,
   cb:(chunk:string)=>void,
-  systemPrompt?:string
 )=>
   {
 
-
   return new Promise<void>(async(resolve,reject)=> {
-    
+
     const response = await fetch('https://openrouter.ai/api/v1/chat/completions', {
       method: 'POST',
       headers: {
@@ -28,9 +25,9 @@ async (
         model,
         messages: messages,
         stream: true,
-        system:systemPrompt
       }),
     });
+  
     
     const reader = response.body?.getReader();
     if (!reader) {
@@ -69,6 +66,8 @@ async (
     
             try {
               const parsed = JSON.parse(data);
+              console.log("Parsed Data:",parsed);
+              
               const content = parsed.choices?.[0]?.delta?.content;
               if (content) {
                 cb(content)

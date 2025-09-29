@@ -10,7 +10,7 @@ const SUPPORTER_MODELS=["x-ai/grok-4-fast:free",
    
 
 export const createChatSchema = z.object({
-conversationId:z.uuid(), 
+conversationId:z.uuid().optional(), 
 message: z.string().max(MAX_TOKEN),
 model:z.enum(SUPPORTER_MODELS)
 
