@@ -1,2 +1,2 @@
-Many Ai 
-An Ai ChatBot to Interact with Multiple Models.
+Many Ai is
+an Ai ChatBot to Interact with Multiple Ai Models.
