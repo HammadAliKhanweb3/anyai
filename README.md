@@ -2,7 +2,7 @@
 
 AnyAI is a full-stack AI chatbot platform designed to interact with **multiple AI models** for a wide range of tasks such as conversation, assistance, and experimentation with different AI capabilities.
 
-The project is structured with a **frontend** and **backend**, supporting authentication and scalable AI integrations.
+The project is structured with a **frontend** and **backend**, and scalable AI integrations.
 
 ---
 
