@@ -111,8 +111,6 @@ AI Models: Multiple AI integrations (configurable)
 
  Conversation history
 
- Role-based access control
-
  Deployment guides (Docker / Cloud)
 
 🤝 Contributing
